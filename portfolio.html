@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stephen's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-50 text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <!-- Navbar -->
+    <header class="bg-white dark:bg-gray-800 shadow-md fixed top-0 w-full z-50 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Stephen.</h1>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+          <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+          <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+        </nav>
+
+        <!-- Right Side Buttons -->
+        <div class="flex items-center space-x-4">
+          <!-- Dark Mode Toggle -->
+          <button id="theme-toggle" class="focus:outline-none">
+            <svg
+              id="sun-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-yellow-400 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m16.95 4.95l-.7-.7M6.75 6.75l-.7-.7M17.25 6.75l.7-.7M6.75 17.25l-.7.7M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+
+            <svg
+              id="moon-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-800 dark:text-gray-100"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-blue-600 dark:text-blue-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-md md:hidden flex flex-col space-y-2 py-3 px-6"
+      >
+        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 px-6"
+    >
+      <h2 class="text-5xl font-bold mb-4 text-blue-700 dark:text-blue-400 animate-bounce">
+        Hi, I'm Stephen 👋
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-6">
+        A passionate <span class="text-blue-600 dark:text-blue-400 font-semibold">Frontend Developer</span> and
+        <span class="text-blue-600 dark:text-blue-400 font-semibold">Physics student</span> who loves building beautiful, fast, and responsive web experiences.
+      </p>
+      <a
+        href="#projects"
+        class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition transform hover:scale-105"
+        >View My Work</a
+      >
+
+      <!-- Optional Animation -->
+      <lottie-player
+        src="https://assets9.lottiefiles.com/packages/lf20_tfb3estd.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px; margin-top: 30px"
+        loop
+        autoplay
+      ></lottie-player>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-4xl mx-auto px-6 py-20">
+      <h3 class="text-3xl font-semibold mb-4 text-blue-600 dark:text-blue-400 text-center">About Me</h3>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-center">
+        I’m a self-taught frontend developer skilled in HTML, CSS, JavaScript, and Tailwind CSS.
+        I’m currently learning React and backend development to become a full-stack developer.
+        I enjoy creating clean, functional, and user-friendly interfaces that make the web better.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-100 dark:bg-gray-800 py-20 transition-colors duration-300">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-semibold mb-8 text-blue-600 dark:text-blue-400 text-center">Projects</h3>
+        <div id="project-container" class="grid md:grid-cols-3 gap-8"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+      <h3 class="text-3xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Contact Me</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">
+        Want to collaborate or hire me? Let’s connect and build something amazing together!
+      </p>
+      <a
+        href="mailto:your-email@example.com"
+        class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition transform hover:scale-105"
+        >Send a Message</a
+      >
+    </section>
+
+    <footer class="text-center py-6 text-gray-500 dark:text-gray-400 border-t dark:border-gray-700">
+      © 2025 Stephen. Built with ❤️ using Tailwind CSS.
+    </footer>
+
+    <script>
+      // 🌙 Dark Mode Toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+      const moonIcon = document.getElementById("moon-icon");
+      const sunIcon = document.getElementById("sun-icon");
+
+      // Load theme from localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        moonIcon.classList.add("hidden");
+        sunIcon.classList.remove("hidden");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const isDark = html.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        moonIcon.classList.toggle("hidden");
+        sunIcon.classList.toggle("hidden");
+      });
+
+      // 🍔 Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // ⚡ Dynamic Project Data
+      const projects = [
+        {
+          title: "GiftBridge",
+          desc: "A platform for sharing and exchanging gifts seamlessly between users.",
+          link: "#"
+        },
+        {
+          title: "Realtime Board",
+          desc: "A collaborative online whiteboard built with HTML, JS, and Firebase.",
+          link: "#"
+        },
+        {
+          title: "Fendor",
+          desc: "A minimalist fashion e-commerce concept featuring modern UI design.",
+          link: "#"
+        },
+        {
+          title: "Portfolio 2.0",
+          desc: "My redesigned personal portfolio built using Tailwind CSS and JavaScript.",
+          link: "#"
+        },
+        {
+          title: "QuizQuest",
+          desc: "An interactive quiz web app with score tracking and animations.",
+          link: "#"
+        },
+        {
+          title: "ClosetCulture",
+          desc: "A full fashion e-commerce web app with cart, login, and admin dashboard.",
+          link: "#"
+        }
+      ];
+
+      const container = document.getElementById("project-container");
+      projects.forEach((p) => {
+        const card = document.createElement("div");
+        card.className =
+          "bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-xl transition transform hover:scale-105";
+        card.innerHTML = `
+          <h4 class="text-xl font-bold mb-2">${p.title}</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">${p.desc}</p>
+          <a href="${p.link}" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">View Project →</a>
+        `;
+        container.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
